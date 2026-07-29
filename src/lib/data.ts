@@ -120,12 +120,13 @@ export const projects: Project[] = [
   {
     name: "NotesApp",
     description:
-      "A clean, responsive notes application featuring rich text markdown formatting and categorization.",
-    tech: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
+      "A clean, responsive notes application featuring rich text markdown formatting and categorization built with serverless architecture.",
+    tech: ["Next.js", "AWS Lambda", "DynamoDB", "AWS Amplify", "AWS S3"],
     period: "Jun 2025",
     highlights: [
       "Developed a clean and responsive notes application featuring rich text markdown formatting and categorization.",
-      "Secured routes with JSON Web Tokens (JWT) and implemented database persistence with MongoDB.",
+      "Built a serverless backend using AWS Lambda and DynamoDB for low-latency, scalable note storage.",
+      "Deployed and hosted the application using AWS Amplify and utilized AWS S3 for note media attachments.",
     ],
     githubUrl: "https://github.com/ashishjadhav58/Notesapp",
   },
