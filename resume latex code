@@ -1,0 +1,184 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% Standardized modern page geometry to maximize 1-page text area cleanly
+\usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - clean contrast
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% Optimized list pacing for beautiful line tracking at 11pt
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, topsep=1pt, parsep=1pt, itemsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontawesome5}
+\begin{document}
+
+\begin{center}
+{\Huge \textbf{Varad Chaudhari}}\\[4pt]
+\small
+\faPhone\ +91 8767096396 \hspace{8pt}|
+\hspace{8pt}\faEnvelope\ \href{mailto:varadchaudhari.rmdstic.comp@gmail.com}{varadchaudhari.rmdstic.comp@gmail.com}
+\hspace{8pt}|
+\hspace{8pt}\faLinkedin\ \href{https://linkedin.com/in/varadc}{linkedin.com/in/varadc}
+\hspace{8pt}\faGithub\ \href{https://github.com/varaddd911}{@varaddd911}
+
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{2026 B.E. Computer Engineering graduate (CGPA: 9.14) with internship experience building full-stack systems using Spring Boot, React, and AWS. Shipped production-grade distributed systems including a live recruitment platform with real-time coding assessments. Seeking a software engineering role to design and deliver scalable, high-performance systems.}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, C++, JavaScript, HTML/CSS} \\
+     \textbf{Frameworks \& Libraries}{: Spring Boot, React.js, Next.js} \\
+     \textbf{Databases}{: MySQL, PostgreSQL, MongoDB, DynamoDB, Redis} \\
+     \textbf{Cloud \& DevOps}{: AWS, Google Cloud Run, Docker, Git, Postman} \\
+     \textbf{Backend \& APIs}{: REST APIs, Microservices, JWT Authentication, STOMP WebSocket} \\
+     \textbf{AI \& Remote Sensing}{: YOLOv8, Computer Vision, Image Segmentation, Google Earth Engine} \\
+     \textbf{Integrated Services}{: Judge0, Razorpay} \\
+     \textbf{Concepts}{: OOP, Data Structures \& Algorithms, Distributed Systems, System Design}
+    }}
+ \end{itemize}\vspace{-6pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{HireNPlace} -- \textit{React, Spring Boot, PostgreSQL, Google Cloud Run, Redis, Judge0}}{Oct 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architected a multi-role recruitment platform (students, TPOs, companies) with JWT role-based access control and RESTful APIs using Spring Boot and PostgreSQL.}
+        \resumeItem{Integrated Judge0 sandboxed code execution on VM instances for real-time coding assessments.}
+        \resumeItem{Deployed containerized backend on Google Cloud Run with Redis caching, cutting API latency from 800ms to 200ms (75\% improvement).}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{E-Commerce Microservices} -- \textit{Spring Boot, OpenFeign, Eureka Service Discovery, REST APIs}}{June 2025 -- July 2025}
+      \resumeItemListStart
+        \resumeItem{Built a 3-service loosely-coupled backend (product catalog, order processing, payment) with independent deployability and OpenFeign declarative HTTP clients.}
+        \resumeItem{Configured Eureka service registry for fault-tolerant inter-service communication and load balancing.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{NewsBoard} -- \textit{AWS Lambda, DynamoDB, S3, API Gateway}}{Aug 2025 -- Sept 2025}
+      \resumeItemListStart
+        \resumeItem{Deployed a fully serverless web app on AWS with Lambda, DynamoDB, S3, and API Gateway authorization featuring auto-scaling with zero server management.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Right-Shift Infotech}{Dec 2024 -- Mar 2025}
+      {Full-Stack Developer Intern}{Pune, India}
+      \resumeItemListStart
+       
+        \resumeItem{Built and deployed full-stack features using React, Spring Boot, and REST APIs, adhering to clean architecture and code reviews.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Maritime Shield: Near Real-Time Satellite based Ocean Pollution Detection} -- IEEE, Co-Author}{Feb 2026}
+      \resumeItemListStart
+        \resumeItem{Co-authored an IEEE-published review (ETFI 2026, Pune) on AI-driven marine pollution detection — oil spills, algae blooms, and debris — using SAR, MODIS, and Sentinel-2 satellite imagery.
+
+}
+        
+        \resumeItem{DOI: 10.1109/ETFI68128.2026.11484844 $|$ \href{https://ieeexplore.ieee.org/abstract/document/11484844}{\underline{ieeexplore.ieee.org/abstract/document/11484844}}}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {RMD Sinhgad School of Engineering, SPPU}{Pune, India}
+      {B.E. in Computer Engineering -- \textbf{CGPA: 9.20/10} | 2026 Batch}{Aug 2023 -- June 2026}
+    \resumeSubheading
+      {TSSM's Bhivarabai Sawant College of Engineering and Research}{Pune, India}
+      {Diploma in Computer Engineering --\textbf{ 85.37}\%}{Aug 2020 -- June 2023}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+       Postman API Fundamentals Student Expert $|$ Oracle Cloud Infrastructure 2025 AI Foundations Associate $|$ Udemy -- Complete SQL Bootcamp (2024)
+    }}
+ \end{itemize}
+
+\end{document}
